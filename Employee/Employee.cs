@@ -11,7 +11,6 @@ namespace AAA
         private string name;
         private int baseSalary;
         private int benefit;
-        private int salary;
 
         public string Name { get => name; set => name = value; }
 
@@ -33,7 +32,7 @@ namespace AAA
 
         public int Benefit
         {
-            get => Benefit;
+            get => this.benefit;
             set
             {
                 if (value < 0)
@@ -49,10 +48,9 @@ namespace AAA
 
         public int Salary
         {
-            get => Salary;
-            set
+            get //  只有get代表為唯讀屬性；
             {
-                this.salary = this.baseSalary + this.benefit;
+                return this.baseSalary + this.benefit;
             }
         }
     }

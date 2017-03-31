@@ -20,7 +20,7 @@ namespace Company
             {
                 int baseSalary = int.Parse(Console.ReadLine());
                 a.BaseSalary = baseSalary;
-                Console.WriteLine("這位員工的底薪為{0}", baseSalary);
+                Console.WriteLine("這位員工的底薪為{0}", a.BaseSalary);
             }
             catch
             {
@@ -33,7 +33,7 @@ namespace Company
             {
                 int benefit = int.Parse(Console.ReadLine());
                 a.Benefit = benefit;
-                Console.WriteLine("這位員工的獎金為{0}", benefit);
+                Console.WriteLine("這位員工的獎金為{0}", a.Benefit);
             }
             catch
             {
@@ -41,7 +41,7 @@ namespace Company
                 return;
             }
 
-            Console.Write("所以你這個月可以領:{0}", a.Salary);
+            Console.WriteLine("所以你這個月可以領:{0}", a.Salary);   //  唯讀，所以只有get
         }
     }
 }
